@@ -17,8 +17,72 @@ header-img: "img/about-bg.jpg"
     <!--copied from markdown -->
     <blockquote><p>嵌入式linux爱好者，学习者<br>
     活到老，学到老</p></blockquote>
-
     
+    <p>Hey，我是<strong>李军</strong>，学生 &amp; 嵌入式学习者，<a href="http://www.cugb.edu.cn/">就读地大北京</a></p>
+        
+    <p>音乐依赖患者，喜欢民谣，喜欢各种体育赛事，NBA狂热篮球迷，喜欢阅读文学作品，余华、路遥、贾平凹、莫言等作品都有所了解，喜欢这种现实主义小说，最爱《平凡的世界》。</p>
+</div>
+
+<!-- English Version -->
+<div class="en post-container">
+    <blockquote><p>Embedded Linux lover, learner. <br>
+    Yet it is never too late to learn.</p></blockquote>
+
+    <p>Hi, I am <strong>Li Jun(李军)</strong>，you can call me <strong>Lmonologue</strong>. I'm an student &amp; Embedded learner </p>
+    
+    
+
+    <p>Music depend on the patient, like folk songs, like all kinds of sports, the NBA fanatics basketball fan, like reading literature, yu hua, lu yao, jia pingwa, mo yan and other works, like this kind of realist novel, "ordinary world"</p>
+
+</div>
+
+<!-- Handle Language Change -->
+<script type="text/javascript">
+    // get nodes
+    var $zh = document.querySelector(".zh");
+    var $en = document.querySelector(".en");
+    var $select = document.querySelector("select");
+
+    // bind hashchange event
+    window.addEventListener('hashchange', _render);
+
+    // handle render
+    function _render(){
+        var _hash = window.location.hash;
+        // en
+        if(_hash == "#en"){
+            $select.selectedIndex = 1;
+            $en.style.display = "block";
+            $zh.style.display = "none";
+        // zh by default
+        }else{
+            // not trigger onChange, otherwise cause a loop call.
+            $select.selectedIndex = 0;
+            $zh.style.display = "block";
+            $en.style.display = "none";
+        }
+    }
+
+    // handle select change
+    function onLanChange(index){
+        if(index == 0){
+            window.location.hash = "#zh"
+        }else{
+            window.location.hash = "#en"
+        }
+    }
+
+    // init
+    _render();
+</script>
+
+
+
+
+
+
+
+
 
     
 
