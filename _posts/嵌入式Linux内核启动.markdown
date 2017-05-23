@@ -1,0 +1,14 @@
+---
+layout:     post
+title:      "嵌入式Linux内核启动"
+subtitle:   " \"嵌入式Linux内核启动\""
+date:       2017-05-23 12:00:00
+author:     "Lmonologue"
+header-img: "img/post-bg-2015.jpg"
+catalog: true
+tags:
+    - Linux
+---
+
+## 前言
+嵌入式linux内核的启动全过程主要分为三个阶段。第一阶段为内核自解压过程，第二阶段主要工作是设置ARM处理器工作模式、使能MMU、设置一级页表等，而第三阶段则主要为C代码，包括内核初始化的全部工作，下面是详细介绍。
