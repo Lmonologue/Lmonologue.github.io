@@ -1,7 +1,7 @@
 ---
 layout:     post
-title:      "嵌入式Linux内核启动"
-subtitle:   " \"嵌入式Linux内核启动\""
+title:      "Linux"
+subtitle:   " \"Linux\""
 date:       2017-05-23 12:00:00
 author:     "Lmonologue"
 header-img: "img/post-bg-2015.jpg"
